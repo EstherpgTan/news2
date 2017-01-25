@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>News</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= cloudinary_js_config %>
+
+  <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</head>
+<body>
+
+  <img class="title-image" src="http://res.cloudinary.com/esthertan/image/upload/c_fill,h_190,w_1280/v1485232452/News_app_-_Header_zue95s.png">
+      <nav class=".black">
+
+        <%= link_to "ARTICLES", root_path %>>
+        <%= link_to "HOME", root_path %>
+        <%= link_to "NEWS", root_path %>
+        <%= link_to "BUSINESS", root_path %>
+        <%= link_to "PROPERTY", root_path %>
+        <%= link_to "FASHION", root_path %>
+        <%= link_to "ALLUSERS", users_path %>
+        <% unless @current_user.present? %>
+          <%= link_to "MEMBER:SIGNUP", new_user_path %>
+          <%= link_to "LOGIN", login_path %>
+        <% else %>
+          <%= link_to "EDIT PROFILE", edit_user_path() %> |
+          <%= link_to "LOGOUT #{@current_user.email}", login_path, :method => :delete %>
+        <% end %>
+</nav>
+
+        <%= form_tag(search_news_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search News by keyword"%>
+            <%= submit_tag "Search",:name => nil%>
+        <% end %>
+
+       <!-- <<div class="video-container">
+                 <embed src="http://res.cloudinary.com/esthertan/video/upload/c_scale,w_514/v1485236515/fashion-show-model-walks-down-the-runway_sdzvgjxfg__PM_qw3ham.mp4" type="video/mp4">
+              </div>  -->
+
+<%= yield %>
+
+</body>
+</html>
+<footer>
+  <div>
+<a href="[full link to your Twitter]">
+<img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter1.png" width="35" height="35" />
+</a>
+<a href="[full link to your Instagram]">
+<img title="Instagram" alt="RSS" src="https://socialmediawidgets.files.wordpress.com/2014/03/10_instagram.png" width="35" height="35" />
+</a>
+<a href="[full link to your Facebook page]">
+<img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/02_facebook1.png" width="35" height="35" />
+</a>
+<a href="pinterestaddress">
+<img title="Pinterest" alt="Pinterest" src="https://socialmediawidgets.files.wordpress.com/2014/03/13_pinterest1.png" width="35" height="35" />
+</a>
+</div>
+
+<div class="row">
+<div class="About us col s1">
+  <p>About us<p>
+</div>
+<div class="Contact us col s3">
+  <p>Contact us<p>
+  </div>
+    </div>
+
+  <p>Copyright 2016</p>
+</footer>
