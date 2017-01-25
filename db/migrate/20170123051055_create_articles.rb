@@ -4,7 +4,8 @@ class CreateArticles < ActiveRecord::Migration
       t.integer :category_id
       t.string :heading
       t.text :content
-      t.string :author
+      t.text :image
+      t.integer :user_id
 
       t.timestamps null: false
     end

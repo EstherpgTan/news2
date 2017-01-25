@@ -1,0 +1,7 @@
+<% if @article.category.title == "Fashion" %>
+  <p>SHOW SLIDER</p>
+<% end %>
+
+<%= image_tag @article.image %>
+<h1><%= @article.heading %></h1>
+<p><%= @article.content.html_safe %></p>

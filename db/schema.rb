@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 20170124233950) do
     t.integer  "category_id"
     t.string   "heading"
     t.text     "content"
-    t.string   "author"
+    t.text     "image"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
