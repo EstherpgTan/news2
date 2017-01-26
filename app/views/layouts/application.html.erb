@@ -6,16 +6,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= cloudinary_js_config %>
+  <%#= cloudinary_js_config %>
 
   <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 </head>
 <body>
 
@@ -24,10 +23,10 @@
 
         <%= link_to "ARTICLES", root_path %>
         <%= link_to "HOME", root_path %>
-        <%= link_to "NEWS", root_path %>
-        <%= link_to "BUSINESS", root_path %>
-        <%= link_to "PROPERTY", root_path %>
-        <%= link_to "FASHION", root_path %>
+        <%= link_to "NEWS", "/#news" %>
+        <%= link_to "BUSINESS", "/#business" %>
+        <%= link_to "PROPERTY", "/#property" %>
+        <%= link_to "FASHION", "/#fashion" %>
         <%= link_to "ALLUSERS", users_path %>
         <% unless @current_user.present? %>
           <%= link_to "MEMBER:SIGNUP", new_user_path %>
@@ -79,18 +78,9 @@
                  <embed src="http://res.cloudinary.com/esthertan/video/upload/c_scale,w_514/v1485236515/fashion-show-model-walks-down-the-runway_sdzvgjxfg__PM_qw3ham.mp4" type="video/mp4">
               </div>  -->
 
-            </head>
-            <body>
-              <div class="slider">
-                <img src="http://res.cloudinary.com/esthertan/image/upload/v1485339839/Spring_2FSummer_2017_Couture_carousel_vkazo5.png">
-                <img src="http://res.cloudinary.com/esthertan/image/upload/v1485442024/2_pbhw2j.png">
-                <img src="http://res.cloudinary.com/esthertan/image/upload/v1485442025/3_xsaude.png">
-              </div>
-
 <%= yield %>
 
-</body>
-</html>
+
 <footer>
 </br>
 </br>

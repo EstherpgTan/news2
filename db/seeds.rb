@@ -211,12 +211,12 @@ a10 = Article.create :heading => "THE TOP 10 TRENDS FROM PRE-FALL 2017", :image 
 
 a11 = Article.create :heading => "THE BEST RUNWAY LOOKS FROM COUTURE WEEK SPRING 2017", :image => "http://res.cloudinary.com/esthertan/image/upload/c_limit,w_200/v1485249280/hbz-couture-fw2017-valli-06_z3kbo7.jpg", :content => "See all the best runway looks from the top haute couture collections.", :category => c4
 
-a12 = Article.create :heading => "RALPH LAUREN FACES BOYCOTT AFTER DRESSING MELANIA TRUMP", :image => "http://res.cloudinary.com/esthertan/image/upload/c_scale,w_300/v1485249189/gallery-1485180128-hbz-melania-ralph-lead_sflhb6.jpg",  :content => \"There have been calls on social media to boycott Ralph Lauren after the brand dressed Melania Trump for the inauguration last Friday.</br>
+a12 = Article.create :heading => "RALPH LAUREN FACES BOYCOTT AFTER DRESSING MELANIA TRUMP", :image => "http://res.cloudinary.com/esthertan/image/upload/c_scale,w_300/v1485249189/gallery-1485180128-hbz-melania-ralph-lead_sflhb6.jpg",  :content => "There have been calls on social media to boycott Ralph Lauren after the brand dressed Melania Trump for the inauguration last Friday.</br>
 The brand designed a custom-made powder-blue dress for the new First Lady, which she wore with matching elbow-length gloves and diamond earrings.<br />
 <br />
 However, a social-media hashtag has since been launched, protesting against the label for working with Trump. Some Twitter users believe the move shows that Lauren doesn't care about sexual assault towards women – a reference to the numerous allegations that have emerged concerning the new President. Others have tweeted the brand, writing:<br /> \"It's not OK to support oppression. An anonymous source from Ralph Lauren said that the reception to dressing Trump was not all positive.<br /><br />
 \"We immediately started to get complaints about Melania Trump wearing [the label]. And people are using the #boycottralphlauren hashtag,\" said the source.
-Lauren also dressed Hillary Clinton for the inauguration, who wore a white pant suit. The move is thought to show an apolitical stance.\" :category => c4
+Lauren also dressed Hillary Clinton for the inauguration, who wore a white pant suit. The move is thought to show an apolitical stance.", :category => c4
 
 
 puts "Articles count: #{Article.all.count}"

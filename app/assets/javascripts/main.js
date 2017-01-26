@@ -13,10 +13,25 @@
 // //   });
 // //
 // // });
-// $( document ).ready( function () {
-// $('.autoplay').slick({
-//   slidesToShow: 4,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   autoplaySpeed: 2000,
-// });
+$( document ).ready( function () {
+  $(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+$('.autoplay').slick({
+  // slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+});

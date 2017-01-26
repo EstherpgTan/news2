@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<script src="main.js"></script>
-<link rel="stylesheet" type="text/css" href="news.scss"/>
-<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-<script type="text/javascript" src="jquery-3.1.1.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+
+<div class="autoplay slider">
+  <img src="http://res.cloudinary.com/esthertan/image/upload/v1485339839/Spring_2FSummer_2017_Couture_carousel_vkazo5.png">
+  <img src="http://res.cloudinary.com/esthertan/image/upload/v1485442024/2_pbhw2j.png">
+  <img src="http://res.cloudinary.com/esthertan/image/upload/v1485442025/3_xsaude.png">
+</div>
+
 
   <div class="divider"></div>
    <div class="row">
-     <h5>Fashion</h5><br>
+     <h5 id="fashion">Fashion</h5><br>
      <div class="Fashion col s4">
         <%= link_to @fashion_articles.first.heading, article_path(@fashion_articles.first) %>
       <%= image_tag @fashion_articles.first.image %>
@@ -32,7 +29,7 @@
 
     <div class="divider"></div>
     <div class="row">
-      <h5>News</h5><br>
+      <h5 id="news">News</h5><br>
     <div class= "News col s4">
     <%= link_to @news_articles.first.heading, article_path(@news_articles.first) %>
     <%= image_tag @news_articles.first.image %>
@@ -52,7 +49,7 @@
 
   <div class="divider"></div>
   <div class="row">
-    <h5>Business</h5><br>
+    <h5 id="business">Business</h5><br>
   <div class="Business col s4">
   <%= link_to @business_articles.first.heading, article_path(@business_articles.first) %>
       <%= image_tag @business_articles.first.image %>
@@ -71,7 +68,7 @@
 
   <div class="divider"></div>
   <div class="row">
-    <h5>Property</h5><br>
+    <h5 id="property">Property</h5><br>
       <div class="Property col s4">
     <%= link_to @property_articles.first.heading, article_path(@property_articles.first) %>
     <%= image_tag @property_articles.first.image %>
@@ -86,6 +83,3 @@
     </div>
   </div>
   </div>
-
-
-</body>
